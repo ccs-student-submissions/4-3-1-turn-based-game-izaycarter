@@ -51,7 +51,7 @@ and/or [watch this](http://youtube.com/watch?v=MNmKNhm-1Js).
   
 ## Caffeinated Mode
 
-- Using Django Rest Framework and build a RESTful api to make the game multiplayer. You could either have multiple players, or have one person control the enemy and one control the player
+- Using Django Rest Framework, build a RESTful api to make the game multiplayer. You could either have multiple players, or have one person control the enemy and one control the player
 
 ## Additional Resources
 
