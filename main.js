@@ -10,5 +10,7 @@ $(function() {
         }
     };
 
+let joe = new Player({name:"joe",mainAttack:{name:"hammerTime", Power:10},secondAttack:{name:"sinister-snap", power: 5}});
+console.log(joe);
 
 });
