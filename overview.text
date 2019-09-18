@@ -1,0 +1,18 @@
+The gameplay should go back and forth between an enemy and the player, each inflicting damage on the other when they launch a successful attack.
+- There should be multiple player types. -3
+
+- There should be multiple enemy types. -3
+
+- You should be able to select the player type from a dropdown. click on a player name
+
+- The enemy type should be randomly generated.
+
+- The player should manually select the "Fight" action to attack.  -button to click on to attack
+
+- The enemy should automatically attack when it is its turn.
+
+- You should use constructors and prototypes for the players and enemies.
+
+- The player's health should be visible.
+
+- The enemies health may be visible, at your discretion.
