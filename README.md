@@ -1,4 +1,4 @@
-# 6.3 Turn Based Game
+# 4.3 Turn Based Game
 
 ## Objectives
 
@@ -48,10 +48,6 @@ and/or [watch this](http://youtube.com/watch?v=MNmKNhm-1Js).
 - Give the player the ability to use items, such as items that regain health or increase attack
 - Make the game play cycle between two players Player 1 -> Enemy -> Player 2 -> Enemy
 - Implement "ailments", e.g. being poisoned makes you weaker, being put to sleep makes you skip your turn
-  
-## Caffeinated Mode
-
-- Using Django Rest Framework, build a RESTful api to make the game multiplayer. You could either have multiple players, or have one person control the enemy and one control the player
 
 ## Additional Resources
 
