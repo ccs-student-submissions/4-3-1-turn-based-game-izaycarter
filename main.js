@@ -9,6 +9,8 @@ $(function() {
         }
     };
 
+
+// hero stats
 let joe = new Player({name:"Joe",Attack:{name:"staff of destiny", Power:10}});
 joe.hero = true;
 
@@ -20,6 +22,23 @@ freddy.hero = true;
 
 let isaiah = new Player({name:"Isaiah",Attack:{name:"power of monkeywrench", Power:10}});
 isaiah.hero = true;
-console.log(joe,linda,freddy,isaiah);
+
+
+
+
+// villian stats
+
+let caleb = new Player({name:"caleb",Attack:{name:"swarm of talking ducks", Power:10}});
+caleb.hero = false;
+
+let rob = new Player({name:"Rob",Attack:{name:"sincopated music notes", Power:10}});
+rob.hero = false;
+
+let adien = new Player({name:"Adien",Attack:{name:"thumb tack shutgun", Power:12}});
+adien.hero = false;
+
+let will = new Player({name:"Will",Attack:{name:"evil yorkie", Power:10}});
+will.hero = false;
+console.log(caleb,rob,adien,will);
 
 });
