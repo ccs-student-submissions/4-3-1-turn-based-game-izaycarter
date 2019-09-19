@@ -1,3 +1,14 @@
+#homepage {
+  background-image: url("https://ae01.alicdn.com/kf/HTB1DpBjknmWBKNjSZFBq6xxUFXaZ/Allenjoy-backgrounds-for-photography-studio-boxing-arena-blurred-Cheering-spectator-stadium-spotlight-backdrop-new-photocall.jpg_640x640q70.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+}
 
+.title h1 {
+  font-size: 60px;
+  color: #FFF;
+}
 
 /*# sourceMappingURL=styles.css.map */

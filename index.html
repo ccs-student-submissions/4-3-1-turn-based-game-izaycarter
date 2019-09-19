@@ -10,24 +10,27 @@
 </head>
 
 <body>
-  <div id="homeDiv" style="background-image: url(https://i.ytimg.com/vi/hXQv8_KeU3c/maxresdefault.jpg)">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <header class="masthead mb-auto">
-        <div class="inner">
-          <h3 class="masthead-brand"></h3>
-
-        </div>
-      </header>
     <!-- Front tile Page -->
-    <main class="container">
-        <div class="front-page col>">
-            <h1 class="game-title">Show Me What You Got!</h1>
-            <div id="homeDiv" style="background-image: url(https://i.ytimg.com/vi/hXQv8_KeU3c/maxresdefault.jpg)">
-            <!-- <img href="images/ring-boxing.jpg" alt=""> -->
-             <button type="button" name="Start!" class="start-menu">START!</button>
+    <main id="homepage">
+        <div class="front-page cover-container d-flex w-100 h-100 p-3 mx-auto flex-column justify-content-center">
+            <div class="title row justify-content-center">
+                <h1 class="game-title">Show Me What You Got!</h1>
+            </div>
+            <div class="d-flex justify-content-around">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Choose your Hero!
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+                    <button class="dropdown-item" type="button">Joel</button>
+                    <button class="dropdown-item" type="button">Linda</button>
+                    <button class="dropdown-item" type="button">Freddy</button>
+                    <button class="dropdown-item" type="button">Isaiah</button>
+                  </div>
+                </div>
+                <button type="button" name="Start!" class="start-menu">START!</button>
         </div>
-
-        <section class="characters"></section>
+<!-- battle Arena!!!  -->
 
         <section class="stadium">
             <section class="villian"></section>
@@ -54,9 +57,10 @@
 
 
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
