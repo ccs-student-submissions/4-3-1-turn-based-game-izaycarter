@@ -1,4 +1,12 @@
 $(function() {
+
+
+const startButton = $(".start-btn");
+
+
+
+
+
     class Player{
         constructor(options){
             options = options || {};
@@ -39,6 +47,11 @@ adien.hero = false;
 
 let will = new Player({name:"Will",Attack:{name:"evil yorkie", Power:10}});
 will.hero = false;
+
+
+$(startButton).click(function(){
+    
+})
 
 
 });

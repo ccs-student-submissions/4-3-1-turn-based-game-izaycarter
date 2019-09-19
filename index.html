@@ -12,11 +12,11 @@
 <body>
     <!-- Front tile Page -->
     <main id="homepage">
-        <div class="front-page cover-container d-flex w-100 h-100 p-3 mx-auto flex-column justify-content-center">
-            <div class="title row justify-content-center">
+        <div id="start-page" class="cover-container when-page-active w-100 h-100 p-3 mx-auto flex-column justify-content-center">
+            <div class="title row justify-content-center mb-5">
                 <h1 class="game-title">Show Me What You Got!</h1>
             </div>
-            <div class="d-flex justify-content-around">
+            <div class="when-page-active justify-content-around">
                 <div class="dropdown">
                   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Choose your Hero!
@@ -28,18 +28,18 @@
                     <button class="dropdown-item" type="button">Isaiah</button>
                   </div>
                 </div>
-                <button type="button" name="Start!" class="start-menu">START!</button>
+                <button type="button" name="Start!" class="start-btn">START!</button>
+            </div>
         </div>
 <!-- battle Arena!!!  -->
+        <section id="arena-page" class="when-page-active w-100 h-100 p-3 mx-auto flex-column justify-content-center">
+            <section class="stadium">
+                <section class="villian"></section>
+                <section class="hero"></section>
+            </section>
 
-        <section class="stadium">
-            <section class="villian"></section>
-            <section class="hero"></section>
+            <ul class="attack-list"></ul>
         </section>
-
-
-        <ul class="attack-list"></ul>
-
 
 
     </main>

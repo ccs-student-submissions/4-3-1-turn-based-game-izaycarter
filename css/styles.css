@@ -6,6 +6,10 @@
   height: 800px;
 }
 
+.when-page-active {
+  display: flex;
+}
+
 .title h1 {
   font-size: 60px;
   color: #FFF;
