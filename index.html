@@ -32,40 +32,25 @@
             </div>
         </div>
 <!-- battle Arena!!!  -->
-<div id="arena-page" class="when-page-active w-100 h-100 p-3 mx-auto flex-column justify-content-center">
-    <div class="container">
+        <div id="arena-page" class="when-page-active w-100 h-100 p-3 mx-auto flex-column justify-content-center">
+            <div class="row screen">
+                <div class="col d-flex justify-content-around p2LeftScreen">
+                  <p>P</p>
+                  <img id="PlayerAnimation" class="p2ActualPlayer" src="https://media.giphy.com/media/39BdMOJMK2YVqktnlS/giphy.gif" alt="">
+                </div>
 
-      <div class="row screen">
-        <div class="col-md-6 p2LeftScreen">
-          <p>P</p>
-          <img id="PlayerAnimation" class="p2ActualPlayer" src="https://media.giphy.com/media/39BdMOJMK2YVqktnlS/giphy.gif" alt="">
+                <div class="col d-flex justify-content-around p2RightScreen">
+                  <p>Villian</p>
+                  <img id="VillianAnimation" class="p2AgainstPlayer" src="https://media.giphy.com/media/39BdMOJMK2YVqktnlS/giphy.gif" alt="">
+                </div>
+            </div>
+            <section>
+            <div id="yourHealth"><div id="yourHealthBar"></div></div>
+            <button id="attack">Attack</button>
 
+             <div id="compHealth"><div id="compHealthBar"></div></div>
+             </section>
         </div>
-        <div class="col-md-6 p2RightScreen">
-          <p>Villian</p>
-          <img id="VillianAnimation" class="p2AgainstPlayer" src="https://media.giphy.com/media/39BdMOJMK2YVqktnlS/giphy.gif" alt="">
-
-
-        </div>
-
-
-
-        <section class="stadium">
-            <section class="villian"></section>
-
-            <script id="villain-template" type="text/x-handlebars-template">
-  {{#each charactersVillain}}
-  <div class="super_box2">
-    <div class="insideImg"><img class="insideImg" src="{{imageUrl}}" alt=""></div>
-    <p class="insidePower">Power: {{health}}</p>
-    <p class="insideAttack">Attack: {{attack}}</p>
-    <button type="button" class="btn btn-danger select-villain" value="{{name}}">{{name}}</button>
-  </div>
-  {{/each}}
-</script>
-            <section class="hero"></section>
-        </section>
-
 
     </main>
 
@@ -77,7 +62,16 @@
 
 
 
-
+    <!-- <script id="villain-template" type="text/x-handlebars-template">
+{{#each charactersVillain}}
+<div class="super_box2">
+<div class="insideImg"><img class="insideImg" src="{{imageUrl}}" alt=""></div>
+<p class="insidePower">Power: {{health}}</p>
+<p class="insideAttack">Attack: {{attack}}</p>
+<button type="button" class="btn btn-danger select-villain" value="{{name}}">{{name}}</button>
+</div>
+{{/each}}
+</script> -->
     <!-- End of Title Page -->
 
 
