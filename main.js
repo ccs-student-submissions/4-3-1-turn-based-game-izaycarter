@@ -2,9 +2,13 @@ $(function() {
 
 
 const startButton = $(".start-btn");
+const startPage = $("#start-page");
+const arena = $("#arena-page")
 
-
-
+startButton.on("click", () => {
+    startPage.hide();
+    arena.Show();
+});
 
 
     class Player{
@@ -49,9 +53,9 @@ let will = new Player({name:"Will",Attack:{name:"evil yorkie", Power:10}});
 will.hero = false;
 
 
-$(startButton).click(function(){
-    
-})
+ let playtime = () => {
+
+ };
 
 
 });
