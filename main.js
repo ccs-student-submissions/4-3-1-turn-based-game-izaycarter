@@ -5,12 +5,6 @@ const startButton = $(".start-btn");
 const startPage = $("#start-page");
 const arena = $("#arena-page")
 
-startButton.on("click", () => {
-    startPage.hide();
-    arena.Show();
-});
-
-
     class Player{
         constructor(options){
             options = options || {};
@@ -53,6 +47,11 @@ let will = new Player({name:"Will",Attack:{name:"evil yorkie", Power:10}});
 will.hero = false;
 
 
+
+startButton.on("click", () => {
+    startPage.hide();
+    arena.Show();
+});
  let playtime = () => {
 
  };
