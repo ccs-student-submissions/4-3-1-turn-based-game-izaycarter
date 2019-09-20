@@ -63,4 +63,16 @@
   background: #FF005B;
 }
 
+.win-text {
+  color: #FFF;
+  position: relative;
+  left: 30%;
+}
+
+.lose-text {
+  color: #FFF;
+  position: relative;
+  left: 30%;
+}
+
 /*# sourceMappingURL=styles.css.map */

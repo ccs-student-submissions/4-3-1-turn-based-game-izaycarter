@@ -2,20 +2,25 @@ $(function() {
 
 
     const startButton = $(".start-btn");
+    const attackButton = $('#attack');
+
     const startPage = $("#start-page");
+    const winner =  $("#winner-page");
+    const loser = $("#loser-page");
     const arena = $("#arena-page");
+
+    let getstarted = arena.hide();
+    let winnerPage = winner.hide();
+    let loserPage = loser.hide();
+
     let yourHealthBar = $('#yourHealthBar');
     let compHealthBar = $('#compHealthBar');
-    const attackButton = $('#attack');
-    let getstarted = arena.hide();
-    // let winner =  $("#winner-page")
-    // let loser = $("#loser-page")
 
 
 
 
-    let yourattack = Math.round(Math.random() * 15);
-    let compattack = Math.round(Math.random() * 15);
+    let yourattack = Math.round(Math.random() * 12);
+    let compattack = Math.round(Math.random() * 20);
     let yourHealth = 100;
     let compHealth = 100;
     let characters = [];
@@ -93,7 +98,7 @@ $(function() {
         if (getstarted === arena.hide()) {
             getstarted = arena.show();
             }
-        $('#homepage').css("background-image", "url(https://ae01.alicdn.com/kf/HTB1DpBjknmWBKNjSZFBq6xxUFXaZ/Allenjoy-backgrounds-for-photography-studio-boxing-arena-blurred-Cheering-spectator-stadium-spotlight-backdrop-new-photocall.jpg_640x640q70.jpg)"); 
+        $('#homepage').css("background-image", "url(https://ae01.alicdn.com/kf/HTB1DpBjknmWBKNjSZFBq6xxUFXaZ/Allenjoy-backgrounds-for-photography-studio-boxing-arena-blurred-Cheering-spectator-stadium-spotlight-backdrop-new-photocall.jpg_640x640q70.jpg)");
     });
 
     // find out what this does,
@@ -115,10 +120,13 @@ $(function() {
     });
 
     let gameover = () => {
-        if (compHealth <= 0) {
-            console.log('you win');
-        } else {
-            console.log('you lose');
+        getstarted = arena.hide();
+        if (compHealth <= 0 && winnerPage === winner.hide() ) {
+            winnerPage = winner.show();
+            $('#homepage').css("background-image", "url(https://media.giphy.com/media/l2JJy2RVsHxfv3yw0/giphy.gif)");
+        } if(yourHealth <= 0 && loserPage === loser.hide() ) {
+            loserPage = loser.show();
+            $('#homepage').css("background-image", "url(https://media.giphy.com/media/O0GsnJyMPE2kM/giphy.gif)");
         }
     };
 
