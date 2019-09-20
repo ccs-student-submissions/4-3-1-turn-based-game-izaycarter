@@ -1,5 +1,5 @@
 #homepage {
-  background-image: url("https://ae01.alicdn.com/kf/HTB1DpBjknmWBKNjSZFBq6xxUFXaZ/Allenjoy-backgrounds-for-photography-studio-boxing-arena-blurred-Cheering-spectator-stadium-spotlight-backdrop-new-photocall.jpg_640x640q70.jpg");
+  background-image: url(/Users/freddy/documents/code/homework/4-3-1-turn-based-game-izaycarter/images/attentie-attentie-ig7vN6OkGNE-unsplash.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11,7 +11,7 @@
 }
 
 .title h1 {
-  font-size: 60px;
+  font-size: 100px;
   color: #FFF;
 }
 
@@ -64,3 +64,19 @@
 }
 
 /*# sourceMappingURL=styles.css.map */
+
+.selector {
+  margin-left: 10%;
+  width: 75%;
+}
+button {
+  display: block;
+}
+
+.btn-group {
+  text-align: center;
+}
+
+button.start-btn {
+    width: 150px;
+}

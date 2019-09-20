@@ -1,58 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
-    <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <title></title>
 </head>
 
 <body>
-    <!-- Front tile Page -->
-    <main id="homepage">
-        <div id="start-page" class="cover-container when-page-active w-100 h-100 p-3 mx-auto flex-column justify-content-center">
-            <div class="title row justify-content-center mb-5">
-                <h1 class="game-title">Show Me What You Got!</h1>
-            </div>
-            <div class="when-page-active justify-content-around">
-                <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Choose your Hero!
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                    <button class="dropdown-item" type="button">Joel</button>
-                    <button class="dropdown-item" type="button">Linda</button>
-                    <button class="dropdown-item" type="button">Freddy</button>
-                    <button class="dropdown-item" type="button">Isaiah</button>
-                  </div>
-                </div>
-                <button type="button" name="Start!" class="start-btn">START!</button>
-            </div>
+  <!-- Front tile Page -->
+  <main id="homepage">
+    <div id="start-page" class="cover-container when-page-active p-3 mx-auto flex-column justify-content-center">
+      <div class="title row justify-content-center mb-5">
+        <h1 class="game-title">Show Me What You Got!</h1>
+      </div>
+      <br>
+      <br>
+      <div class="when-page-active justify-content-center">
+
+        <form class="" action="index.html" method="post">
+          <h3 style="color: red;">Choose Your Player</h3>
+          <select class="selector" name="player-selection">
+            <option value="Freddy">Freddy</option>
+            <option value="Linda">Linda</option>
+            <option value="Isaiah">Isaiah</option>
+          </select>
+        </form>
+      </div>
+
+
+      <div class="btn-group row justify-content-center">
+        <button type="button" name="Start!" class="start-btn">New Game</button>
+      </div>
+      <div class="btn-group row justify-content-center">
+        <button type="button" name="button">Option</button>
+      </div>
+      <div class="btn-group row justify-content-center">
+        <button type="button" name="button">Exit</button>
+      </div>
+    </div>
+
+    </div>
+    <!-- battle Arena!!!  -->
+    <div id="arena-page" class="when-page-active w-100 h-100 p-3 mx-auto flex-column justify-content-center">
+      <div class="row screen">
+        <div class="col d-flex justify-content-around p2LeftScreen">
+          <p>P</p>
+          <img id="PlayerAnimation" class="p2ActualPlayer" src="https://media.giphy.com/media/39BdMOJMK2YVqktnlS/giphy.gif" alt="">
         </div>
-<!-- battle Arena!!!  -->
-        <div id="arena-page" class="when-page-active w-100 h-100 p-3 mx-auto flex-column justify-content-center">
-            <div class="row screen">
-                <div class="col d-flex justify-content-around p2LeftScreen">
-                  <p>P</p>
-                  <img id="PlayerAnimation" class="p2ActualPlayer" src="https://media.giphy.com/media/39BdMOJMK2YVqktnlS/giphy.gif" alt="">
-                </div>
 
-                <div class="col d-flex justify-content-around p2RightScreen">
-                  <p>Villian</p>
-                  <img id="VillianAnimation" class="p2AgainstPlayer" src="https://media.giphy.com/media/39BdMOJMK2YVqktnlS/giphy.gif" alt="">
-                </div>
-            </div>
-            <section>
-            <div id="yourHealth"><div id="yourHealthBar"></div></div>
-            <button id="attack">Attack</button>
-
-             <div id="compHealth"><div id="compHealthBar"></div></div>
-             </section>
+        <div class="col d-flex justify-content-around p2RightScreen">
+          <p>Villian</p>
+          <img id="VillianAnimation" class="p2AgainstPlayer" src="https://media.giphy.com/media/39BdMOJMK2YVqktnlS/giphy.gif" alt="">
         </div>
+      </div>
+      <section>
+        <div id="yourHealth">
+          <div id="yourHealthBar"></div>
+        </div>
+        <button id="attack">Attack</button>
 
-    </main>
+        <div id="compHealth">
+          <div id="compHealthBar"></div>
+        </div>
+      </section>
+    </div>
+  </main>
 
 
 
@@ -62,7 +78,7 @@
 
 
 
-    <!-- <script id="villain-template" type="text/x-handlebars-template">
+  <!-- <script id="villain-template" type="text/x-handlebars-template">
 {{#each charactersVillain}}
 <div class="super_box2">
 <div class="insideImg"><img class="insideImg" src="{{imageUrl}}" alt=""></div>
@@ -72,16 +88,16 @@
 </div>
 {{/each}}
 </script> -->
-    <!-- End of Title Page -->
+  <!-- End of Title Page -->
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>
