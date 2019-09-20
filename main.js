@@ -3,33 +3,45 @@ $(function() {
 
     const startButton = $(".start-btn");
     const startPage = $("#start-page");
-    const arena = $("#arena-page")
-    const yourHealthBar = $('#yourHealthBar');
-    const compHealthBar = $('#compHealthBar');
+    const arena = $("#arena-page");
+    let yourHealthBar = $('#yourHealthBar');
+    let compHealthBar = $('#compHealthBar');
     const attackButton = $('#attack');
     let getstarted = arena.hide();
+    // let winner =  $("#winner-page")
+    // let loser = $("#loser-page")
+
+
+
+
+    let yourattack = Math.round(Math.random()*15);
+    let compattack = Math.round(Math.random()*15);
+    let yourHealth = 100;
+    let compHealth = 100;
+
+
+
+
+
         class Player{
             constructor(options){
                 options = options || {};
                 this.name = options.name;
-                this.Attack = {name:options, power: options};
-                let defaults = {health:100};
-                Object.assign(this,defaults,options);
             }
         }
 
 
     // hero stats
-    let joe = new Player({name:"Joe",Attack:{name:"staff of destiny", Power:10}});
+    let joe = new Player({name:"Joe"});
     joe.hero = true;
 
-    let linda = new Player({name:"Linda",Attack:{name:"beam of intensity", Power:10}});
+    let linda = new Player({name:"Linda"});
     linda.hero = true;
 
-    let freddy = new Player({name:"Freddy",Attack:{name:"bolt of might", Power:10}});
+    let freddy = new Player({name:"Freddy"});
     freddy.hero = true;
 
-    let isaiah = new Player({name:"Isaiah",Attack:{name:"a literal monkeywrench", Power:10}});
+    let isaiah = new Player({name:"Isaiah"});
     isaiah.hero = true;
 
 
@@ -37,24 +49,47 @@ $(function() {
 
     // villian stats
 
-    let caleb = new Player({name:"caleb",Attack:{name:"swarm of talking ducks", Power:10}});
+    let caleb = new Player({name:"caleb"});
     caleb.hero = false;
 
-    let rob = new Player({name:"Rob",Attack:{name:"sincopated music notes", Power:10}});
+    let rob = new Player({name:"Rob"});
     rob.hero = false;
 
-    let adien = new Player({name:"Adien",Attack:{name:"thumb tack shutgun", Power:12}});
+    let adien = new Player({name:"Adien"});
     adien.hero = false;
 
-    let will = new Player({name:"Will",Attack:{name:"evil yorkie", Power:10}});
+    let will = new Player({name:"Will"});
     will.hero = false;
 
 
     startButton.on("click", () => {
         startPage.hide();
         if(getstarted === arena.hide()){
-            getstarted = arena.show()
+            getstarted = arena.show();
         }
     });
+
+
+
+    attackButton.on("click", () => {
+        compwidth = (compHealth -= yourattack) + "%";
+        compHealthBar.width(compwidth);
+
+        yourwidth = (yourHealth -= compattack) + "%";
+        yourHealthBar.width(yourwidth);
+
+        if(compHealth <= 0 || yourHealth <= 0) {
+            gameover();
+        }
+
+    });
+
+    let gameover = () =>{
+        if(compHealth <= 0){
+            console.log('you win');
+        } else {
+            console.log('you lose');
+        }
+    };
 
 });
