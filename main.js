@@ -32,34 +32,60 @@ $(function() {
 
 
     // hero stats
-    let joe = new Player({name:"Joe"});
-    joe.hero = true;
+    let Charhero = [{
 
-    let linda = new Player({name:"Linda"});
-    linda.hero = true;
-
-    let freddy = new Player({name:"Freddy"});
-    freddy.hero = true;
-
-    let isaiah = new Player({name:"Isaiah"});
-    isaiah.hero = true;
-
-
-
+    name:'Joe',
+    Attack:10,
+    Power:85,
+    imageUrl:"https://media.giphy.com/media/zwhknCyqHExnW/giphy.gif",
+    hero: true
+  },{
+    name:'Linda',
+    Attack:10,
+    Power:85,
+    imageUrl:"https://media.giphy.com/media/11jokITGudhl8Q/source.gif",
+    hero: true
+  },{
+    name:'Freddy',
+    Attack:10,
+    Power:85,
+    imageUrl:"https://tenor.com/view/vine-crackhead-fight-gif-11019923",
+  },{
+    name:'Isaiah',
+    Attack:10,
+    Power:85,
+    imageUrl:"https://media.giphy.com/media/Exyy0Ocz88jQY/giphy.gif",
+    hero: true
+  },];
 
     // villian stats
 
-    let caleb = new Player({name:"caleb"});
-    caleb.hero = false;
+    let charVillian =[{
 
-    let rob = new Player({name:"Rob"});
-    rob.hero = false;
-
-    let adien = new Player({name:"Adien"});
-    adien.hero = false;
-
-    let will = new Player({name:"Will"});
-    will.hero = false;
+    name: 'caleb',
+    Attack:10,
+    Power:85,
+    imageUrl:"https://media.giphy.com/media/xiYMaJQ3XxxnHDqw8Q/giphy.gif",
+    hero: false
+},{
+    name: 'will',
+    Attack:10,
+    Power:85,
+    imageUrl:"https://media.giphy.com/media/3o6nUWPstbNkVjHB4Y/giphy.gif",
+    hero: false
+  },{
+    name: 'adien',
+    Attack:10,
+    Power:85,
+    imageUrl:"https://media.giphy.com/media/fGI7OX410yk0uGbZ1H/giphy.gif",
+    hero: false
+  },{
+    name: 'robbie',
+    Attack:10,
+    Power:85,
+    imageUrl:"https://media.giphy.com/media/8JNj02eQD4fPD2hR6d/giphy.gif",
+    hero: false
+  },];
 
 
     startButton.on("click", () => {
@@ -67,7 +93,9 @@ $(function() {
         if(getstarted === arena.hide()){
             getstarted = arena.show();
         }
-        $('#homepage').css("background-image", "url(https://ae01.alicdn.com/kf/HTB1DpBjknmWBKNjSZFBq6xxUFXaZ/Allenjoy-backgrounds-for-photography-studio-boxing-arena-blurred-Cheering-spectator-stadium-spotlight-backdrop-new-photocall.jpg_640x640q70.jpg)");  
+        characters.forEach(function(character) {
+    game[character.name.toUpperCase()] = new Player(character);
+  });
     });
 
 
