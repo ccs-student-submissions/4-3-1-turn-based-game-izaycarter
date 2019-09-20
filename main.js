@@ -67,6 +67,7 @@ $(function() {
         if(getstarted === arena.hide()){
             getstarted = arena.show();
         }
+        $('#homepage').css("background-image", "url(https://ae01.alicdn.com/kf/HTB1DpBjknmWBKNjSZFBq6xxUFXaZ/Allenjoy-backgrounds-for-photography-studio-boxing-arena-blurred-Cheering-spectator-stadium-spotlight-backdrop-new-photocall.jpg_640x640q70.jpg)");  
     });
 
 
