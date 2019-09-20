@@ -1,5 +1,5 @@
 #homepage {
-  background-image: url(/Users/freddy/documents/code/homework/4-3-1-turn-based-game-izaycarter/images/attentie-attentie-ig7vN6OkGNE-unsplash.jpg);
+  background-image: url("https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -79,4 +79,13 @@ button {
 
 button.start-btn {
     width: 150px;
+}
+
+button.option-btn {
+  width: 150px;
+
+}
+
+button.exit-btn{
+  width: 150px;
 }
