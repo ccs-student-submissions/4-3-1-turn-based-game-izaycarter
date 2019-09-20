@@ -78,14 +78,37 @@ button {
 }
 
 button.start-btn {
-    width: 150px;
+    width: 200px;
+    margin-top:20px;
+    height: 60px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 button.option-btn {
-  width: 150px;
+  width: 200px;
+  margin-top: 20px;
+  height: 60px;
+  border-radius: 10px;
+  opacity: 0.5;
+  cursor: not-allowed;
 
 }
 
 button.exit-btn{
-  width: 150px;
+  width: 200px;
+  margin-top: 20px;
+  height: 60px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: red;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  cursor:not-allowed;
+}
+
+button.option-btn:hover {
+  cursor: not-allowed;
 }
