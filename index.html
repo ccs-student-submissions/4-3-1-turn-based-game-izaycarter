@@ -21,14 +21,13 @@
       <br>
       <div class="when-page-active justify-content-center">
 
-        <form class="" action="index.html" method="post">
           <h3 style="color: red;">Choose Your Player</h3>
-          <select class="selector" name="player-selection">
+          <select id="box1" class="selector" name="player-selection" >
+            <option value="Joe">Joe</option>
             <option value="Freddy">Freddy</option>
             <option value="Linda">Linda</option>
             <option value="Isaiah">Isaiah</option>
           </select>
-        </form>
       </div>
 
 
@@ -45,8 +44,8 @@
     <!-- battle Arena!!!  -->
     <div id="arena-page" class="when-page-active w-100 h-100 p-3 mx-auto flex-column justify-content-center">
       <div class="row screen">
-        <div class="col d-flex justify-content-around p2LeftScreen">
-          <p>P</p>
+        <div id+"hero-box" class="col d-flex justify-content-around p2LeftScreen">
+          <p id="hero-name">Hero</p>
           <img id="PlayerAnimation" class="p2ActualPlayer" src="https://media.giphy.com/media/39BdMOJMK2YVqktnlS/giphy.gif" alt="">
         </div>
 
@@ -73,25 +72,13 @@
 
   </main>
 
-<script id="villain-template" type="text/x-handlebars-template">
-  {{#each charVillain}}
-  <div class="super_box2">
-    <div class="insideImg"><img class="insideImg" src="{{imageUrl}}" alt=""></div>
-    <p class="insidePower">Power: {{health}}</p>
-    <p class="insideAttack">Attack: {{attack}}</p>
-    <button type="button" class="btn btn-danger select-villain" value="{{name}}">{{name}}</button>
-  </div>
-  {{/each}}
-</script>
 
 
 
 
 
 
-
-
-  <!-- <script id="villain-template" type="text/x-handlebars-template">
+  <script id="villain-template" type="text/x-handlebars-template">
 {{#each charactersVillain}}
 <div class="super_box2">
 <div class="insideImg"><img class="insideImg" src="{{imageUrl}}" alt=""></div>
@@ -100,7 +87,7 @@
 <button type="button" class="btn btn-danger select-villain" value="{{name}}">{{name}}</button>
 </div>
 {{/each}}
-</script> -->
+</script>
 
     <!-- {{#each characters}}
       <img src="{{imageUrl}}" alt="">
