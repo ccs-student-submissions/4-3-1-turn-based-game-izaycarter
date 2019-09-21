@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300" rel="stylesheet">
   <title></title>
 </head>
 
@@ -22,7 +23,7 @@
       <div class="when-page-active justify-content-center">
 
         <form class="" action="index.html" method="post">
-          <h3 style="color: red;">Choose Your Player</h3>
+          <h3 style="color: #b50808fd;">Choose Your Player</h3>
           <select class="selector" name="player-selection">
             <option value="Freddy">Freddy</option>
             <option value="Linda">Linda</option>
@@ -41,48 +42,57 @@
       <div class="btn-group row justify-content-center">
         <button type="button" name="button" class="exit-btn">Exit</button>
       </div>
-    </div>
-    <!-- battle Arena!!!  -->
-    <div id="arena-page" class="when-page-active w-100 h-100 p-3 mx-auto flex-column justify-content-center">
-      <div class="row screen">
-        <div class="col d-flex justify-content-around p2LeftScreen">
-          <p>P</p>
-          <img id="PlayerAnimation" class="p2ActualPlayer" src="https://media.giphy.com/media/39BdMOJMK2YVqktnlS/giphy.gif" alt="">
-        </div>
-
-        <div class="col d-flex justify-content-around p2RightScreen">
-          <p>Villian</p>
-          <img id="VillianAnimation" class="p2AgainstPlayer" src="https://media.giphy.com/media/39BdMOJMK2YVqktnlS/giphy.gif" alt="">
-        </div>
+      <div class="fil-studio">
+        <footer="fil-footer"> &#169 F.I.L Gaming Studio All Right Reserved</footer>
       </div>
-      <section class= "health-bars">
-        <div id="yourHealth">
-          <div id="yourHealthBar"></div>
-        </div>
-        <button id="attack">Attack</button>
 
-        <div id="compHealth">
-          <div id="compHealthBar"></div>
-        </div>
-      </section>
-    </div>
 
-    <!--winner page  -->
-    <div id="winner-page"><h2 class="win-text">YOU WIN!! Nice moves champ!</h2></div>
-    <div id="loser-page"><h2 class="lose-text">Soooo..........yea.......you ......um.....lost.</h2></div>
+
+      <!-- battle Arena!!!  -->
+      <div id="arena-page" class="when-page-active w-100 h-100 p-3 mx-auto flex-column justify-content-center">
+        <div class="row screen">
+          <div class="col d-flex justify-content-around p2LeftScreen">
+            <p>P</p>
+            <img id="PlayerAnimation" class="p2ActualPlayer" src="https://media.giphy.com/media/39BdMOJMK2YVqktnlS/giphy.gif" alt="">
+          </div>
+
+          <div class="col d-flex justify-content-around p2RightScreen">
+            <p>Villian</p>
+            <img id="VillianAnimation" class="p2AgainstPlayer" src="https://media.giphy.com/media/39BdMOJMK2YVqktnlS/giphy.gif" alt="">
+          </div>
+        </div>
+        <section class="health-bars">
+          <div id="yourHealth">
+            <div id="yourHealthBar"></div>
+          </div>
+          <button id="attack">Attack</button>
+
+          <div id="compHealth">
+            <div id="compHealthBar"></div>
+          </div>
+        </section>
+      </div>
+
+      <!--winner page  -->
+      <div id="winner-page">
+        <h2 class="win-text">YOU WIN!! Nice moves champ!</h2>
+      </div>
+      <div id="loser-page">
+        <h2 class="lose-text">Soooo..........yea.......you......um.....lost.</h2>
+      </div>
 
   </main>
 
-<script id="villain-template" type="text/x-handlebars-template">
-  {{#each charVillain}}
-  <div class="super_box2">
-    <div class="insideImg"><img class="insideImg" src="{{imageUrl}}" alt=""></div>
-    <p class="insidePower">Power: {{health}}</p>
-    <p class="insideAttack">Attack: {{attack}}</p>
-    <button type="button" class="btn btn-danger select-villain" value="{{name}}">{{name}}</button>
-  </div>
-  {{/each}}
-</script>
+  <script id="villain-template" type="text/x-handlebars-template">
+    {{#each charVillain}}
+      <div class="super_box2">
+        <div class="insideImg"><img class="insideImg" src="{{imageUrl}}" alt=""></div>
+        <p class="insidePower">Power: {{health}}</p>
+        <p class="insideAttack">Attack: {{attack}}</p>
+        <button type="button" class="btn btn-danger select-villain" value="{{name}}">{{name}}</button>
+      </div>
+    {{/each}}
+  </script>
 
 
 
@@ -102,7 +112,7 @@
 {{/each}}
 </script> -->
 
-    <!-- {{#each characters}}
+  <!-- {{#each characters}}
       <img src="{{imageUrl}}" alt="">
       <button type="button" class="btn btn-danger select-hero targetTwo" value="{{name}}">{{name}}</button>
 
