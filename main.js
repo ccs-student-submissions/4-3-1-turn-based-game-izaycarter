@@ -40,10 +40,6 @@ $(document).ready(function() {
 
     // hero stats
     let charHero = [{
-<<<<<<< HEAD
-
-=======
->>>>>>> working on making char hero buttons work
         name: 'Joe',
         Attack: 10,
         imageUrl: "https://media.giphy.com/media/zwhknCyqHExnW/giphy.gif",
