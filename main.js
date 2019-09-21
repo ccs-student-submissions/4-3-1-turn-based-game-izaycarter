@@ -37,7 +37,7 @@ $(function() {
 
 
     // hero stats
-    let Charhero = [{
+    let charHero = [{
 
         name: 'Joe',
         Attack: 10,
