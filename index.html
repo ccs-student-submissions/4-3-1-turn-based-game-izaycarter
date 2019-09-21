@@ -21,15 +21,13 @@
       <br>
       <br>
       <div class="when-page-active justify-content-center">
-
-        <form class="" action="index.html" method="post">
-          <h3 style="color: #b50808fd;">Choose Your Player</h3>
-          <select class="selector" name="player-selection">
-            <option value="Freddy">Freddy</option>
-            <option value="Linda">Linda</option>
-            <option value="Isaiah">Isaiah</option>
-          </select>
-        </form>
+        <h3 style="color: red;">Choose Your Player</h3>
+        <select id="box1" class="selector" name="player-selection">
+          <option value="Joe">Joe</option>
+          <option value="Freddy">Freddy</option>
+          <option value="Linda">Linda</option>
+          <option value="Isaiah">Isaiah</option>
+        </select>
       </div>
 
 
@@ -43,7 +41,7 @@
         <button type="button" name="button" class="exit-btn">Exit</button>
       </div>
       <div class="fil-studio">
-        <footer="fil-footer"> &#169 F.I.L Gaming Studio All Right Reserved</footer>
+        <footer="fil-footer"> &#169; F.I.L Gaming Studio All Right Reserved</footer>
       </div>
 
 
@@ -84,7 +82,7 @@
   </main>
 
   <script id="villain-template" type="text/x-handlebars-template">
-    {{#each charVillain}}
+    {{#each charactersVillain}}
       <div class="super_box2">
         <div class="insideImg"><img class="insideImg" src="{{imageUrl}}" alt=""></div>
         <p class="insidePower">Power: {{health}}</p>
@@ -93,24 +91,6 @@
       </div>
     {{/each}}
   </script>
-
-
-
-
-
-
-
-
-  <!-- <script id="villain-template" type="text/x-handlebars-template">
-{{#each charactersVillain}}
-<div class="super_box2">
-<div class="insideImg"><img class="insideImg" src="{{imageUrl}}" alt=""></div>
-<p class="insidePower">Power: {{health}}</p>
-<p class="insideAttack">Attack: {{attack}}</p>
-<button type="button" class="btn btn-danger select-villain" value="{{name}}">{{name}}</button>
-</div>
-{{/each}}
-</script> -->
 
   <!-- {{#each characters}}
       <img src="{{imageUrl}}" alt="">
