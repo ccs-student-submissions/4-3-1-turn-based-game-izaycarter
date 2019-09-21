@@ -42,8 +42,6 @@
         <button type="button" name="button" class="exit-btn">Exit</button>
       </div>
     </div>
-
-    </div>
     <!-- battle Arena!!!  -->
     <div id="arena-page" class="when-page-active w-100 h-100 p-3 mx-auto flex-column justify-content-center">
       <div class="row screen">
@@ -57,7 +55,7 @@
           <img id="VillianAnimation" class="p2AgainstPlayer" src="https://media.giphy.com/media/39BdMOJMK2YVqktnlS/giphy.gif" alt="">
         </div>
       </div>
-      <section>
+      <section class= "health-bars">
         <div id="yourHealth">
           <div id="yourHealthBar"></div>
         </div>
@@ -70,6 +68,16 @@
     </div>
   </main>
 
+<script id="villain-template" type="text/x-handlebars-template">
+  {{#each charVillain}}
+  <div class="super_box2">
+    <div class="insideImg"><img class="insideImg" src="{{imageUrl}}" alt=""></div>
+    <p class="insidePower">Power: {{health}}</p>
+    <p class="insideAttack">Attack: {{attack}}</p>
+    <button type="button" class="btn btn-danger select-villain" value="{{name}}">{{name}}</button>
+  </div>
+  {{/each}}
+</script>
 
 
 
@@ -88,9 +96,19 @@
 </div>
 {{/each}}
 </script> -->
-  <!-- End of Title Page -->
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
 
+    {{#each characters}}
+      <img src="{{imageUrl}}" alt="">
+      <button type="button" class="btn btn-danger select-hero targetTwo" value="{{name}}">{{name}}</button>
+
+    {{/each}}
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

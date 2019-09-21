@@ -16,3 +16,46 @@ The gameplay should go back and forth between an enemy and the player, each infl
 - The player's health should be visible.
 
 - The enemies health may be visible, at your discretion.
+
+
+
+
+  </main>
+<!-- Player Selection -->
+    <div id="herosDiv" style="background-image: url(https://static.videezy.com/system/resources/thumbnails/000/008/184/original/slow-motion-orbs-4k-motion-background.jpg)">
+  <div class="row cover">
+     <h1 class="textCharacter">Choose <br> Character:</h1>
+     <div class="hero_box"></div>
+     <div class="villain_box"></div>
+     <img class="imgButton" id="targetTwo" src="http://clipart-library.com/images/kcKBGL6gi.png">
+  </div>
+</div>
+
+    <!-- //XXXXXXXXXXXXXXXXXXXXXXXXXXWinnerXXXXXXXXXXX -->
+
+    <div id="winnerDiv" style="background-image: url(https://static.videezy.com/system/resources/thumbnails/000/008/184/original/slow-motion-orbs-4k-motion-background.jpg
+https://static.videezy.com/system/resources/thumbnails/000/008/184/original/slow-motion-orbs-4k-motion-background.jpg
+)">
+
+<div class="row">
+<img class="winnerImg" src="https://media.giphy.com/media/fdPrizLgIwnc8dHhJR/giphy.gif" alt="">
+<img class="winnerImgNext"src="https://media.giphy.com/media/bimC5dV2NfJOo/giphy.gif" alt="">
+<button type="button" id="newGame"class="btn btn-danger">New game</button>
+<div class="winnerBox">
+ <img src="" id="youWin" alt="">
+ <h1 id="youWinName">Name:</h1>
+</div>
+
+</div>
+</div>
+
+    <script id="hero-template" type="text/x-handlebars-template">
+  {{#each charHero}}
+  <div class="super_box1">
+    <div class="insideImg"><img class="insideImg" src="{{imageUrl}}" alt=""></div>
+    <p class="insidePower">Power: {{health}}</p>
+    <p class="insideAttack">Attack: {{attack}}</p>
+    <button type="button" class="btn btn-danger select-hero" value="{{name}}">{{name}}</button>
+  </div>
+  {{/each}}
+</script>

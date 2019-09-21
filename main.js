@@ -3,58 +3,122 @@ $(function() {
 
     const startButton = $(".start-btn");
     const startPage = $("#start-page");
-    const arena = $("#arena-page")
-    const yourHealthBar = $('#yourHealthBar');
-    const compHealthBar = $('#compHealthBar');
+    const arena = $("#arena-page");
+    let yourHealthBar = $('#yourHealthBar');
+    let compHealthBar = $('#compHealthBar');
     const attackButton = $('#attack');
     let getstarted = arena.hide();
+    // let winner =  $("#winner-page")
+    // let loser = $("#loser-page")
+
+
+
+
+    let yourattack = Math.round(Math.random()*15);
+    let compattack = Math.round(Math.random()*15);
+    let yourHealth = 100;
+    let compHealth = 100;
+
+
+
+
+
         class Player{
             constructor(options){
                 options = options || {};
                 this.name = options.name;
-                this.Attack = {name:options, power: options};
-                let defaults = {health:100};
-                Object.assign(this,defaults,options);
             }
         }
 
 
     // hero stats
-    let joe = new Player({name:"Joe",Attack:{name:"staff of destiny", Power:10}});
-    joe.hero = true;
+    let Charhero = [{
 
-    let linda = new Player({name:"Linda",Attack:{name:"beam of intensity", Power:10}});
-    linda.hero = true;
-
-    let freddy = new Player({name:"Freddy",Attack:{name:"bolt of might", Power:10}});
-    freddy.hero = true;
-
-    let isaiah = new Player({name:"Isaiah",Attack:{name:"a literal monkeywrench", Power:10}});
-    isaiah.hero = true;
-
-
-
+    name:'Joe',
+    Attack:10,
+    Power:85,
+    imageUrl:"https://media.giphy.com/media/zwhknCyqHExnW/giphy.gif",
+    hero: true
+  },{
+    name:'Linda',
+    Attack:10,
+    Power:85,
+    imageUrl:"https://media.giphy.com/media/11jokITGudhl8Q/source.gif",
+    hero: true
+  },{
+    name:'Freddy',
+    Attack:10,
+    Power:85,
+    imageUrl:"https://tenor.com/view/vine-crackhead-fight-gif-11019923",
+  },{
+    name:'Isaiah',
+    Attack:10,
+    Power:85,
+    imageUrl:"https://media.giphy.com/media/Exyy0Ocz88jQY/giphy.gif",
+    hero: true
+  },];
 
     // villian stats
 
-    let caleb = new Player({name:"caleb",Attack:{name:"swarm of talking ducks", Power:10}});
-    caleb.hero = false;
+    let charVillian =[{
 
-    let rob = new Player({name:"Rob",Attack:{name:"sincopated music notes", Power:10}});
-    rob.hero = false;
-
-    let adien = new Player({name:"Adien",Attack:{name:"thumb tack shutgun", Power:12}});
-    adien.hero = false;
-
-    let will = new Player({name:"Will",Attack:{name:"evil yorkie", Power:10}});
-    will.hero = false;
+    name: 'caleb',
+    Attack:10,
+    Power:85,
+    imageUrl:"https://media.giphy.com/media/xiYMaJQ3XxxnHDqw8Q/giphy.gif",
+    hero: false
+},{
+    name: 'will',
+    Attack:10,
+    Power:85,
+    imageUrl:"https://media.giphy.com/media/3o6nUWPstbNkVjHB4Y/giphy.gif",
+    hero: false
+  },{
+    name: 'adien',
+    Attack:10,
+    Power:85,
+    imageUrl:"https://media.giphy.com/media/fGI7OX410yk0uGbZ1H/giphy.gif",
+    hero: false
+  },{
+    name: 'robbie',
+    Attack:10,
+    Power:85,
+    imageUrl:"https://media.giphy.com/media/8JNj02eQD4fPD2hR6d/giphy.gif",
+    hero: false
+  },];
 
 
     startButton.on("click", () => {
         startPage.hide();
         if(getstarted === arena.hide()){
-            getstarted = arena.show()
+            getstarted = arena.show();
         }
+        characters.forEach(function(character) {
+    game[character.name.toUpperCase()] = new Player(character);
+  });
     });
+
+
+
+    attackButton.on("click", () => {
+        compwidth = (compHealth -= yourattack) + "%";
+        compHealthBar.width(compwidth);
+
+        yourwidth = (yourHealth -= compattack) + "%";
+        yourHealthBar.width(yourwidth);
+
+        if(compHealth <= 0 || yourHealth <= 0) {
+            gameover();
+        }
+
+    });
+
+    let gameover = () =>{
+        if(compHealth <= 0){
+            console.log('you win');
+        } else {
+            console.log('you lose');
+        }
+    };
 
 });
