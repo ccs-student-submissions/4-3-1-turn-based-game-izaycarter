@@ -1,3 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+.new {
+  padding: 10px;
+}
+
+#homepage {
+  background-image: url("https://ae01.alicdn.com/kf/HTB1DpBjknmWBKNjSZFBq6xxUFXaZ/Allenjoy-backgrounds-for-photography-studio-boxing-arena-blurred-Cheering-spectator-stadium-spotlight-backdrop-new-photocall.jpg_640x640q70.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+}
+
+.title h1 {
+  font-size: 60px;
+  color: #FFF;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+}
+
+.togglebar {
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
 #homepage {
   background-image: url("https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
   background-position: center;
@@ -9,7 +42,6 @@
 .when-page-active {
   display: flex;
 }
-
 
 #yourHealth {
   position: relative;
@@ -75,15 +107,15 @@
 .title h1 {
   font-size: 100px;
   color: #b50808fd;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 900;
 }
-
 
 .selector {
   margin-left: 10%;
   width: 75%;
 }
+
 button {
   display: block;
 }
@@ -93,11 +125,11 @@ button {
 }
 
 button.start-btn {
-    width: 200px;
-    margin-top:40px;
-    height: 60px;
-    border-radius: 10px;
-    cursor: pointer;
+  width: 200px;
+  margin-top: 40px;
+  height: 60px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 button.option-btn {
@@ -107,13 +139,13 @@ button.option-btn {
   border-radius: 10px;
   opacity: 0.5;
   cursor: not-allowed;
-
 }
+
 button.option-btn:hover {
   cursor: not-allowed;
 }
 
-button.exit-btn{
+button.exit-btn {
   width: 200px;
   margin-top: 40px;
   height: 60px;
@@ -123,14 +155,15 @@ button.exit-btn{
 
 button:hover {
   background-color: #b50808fd;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-  cursor:not-allowed;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  cursor: not-allowed;
 }
 
 .fil-studio {
   text-align: center;
   margin-top: 110px;
-  font-size:larger;
+  font-size: larger;
   font-weight: bold;
-
 }
+
+/*# sourceMappingURL=styles.css.map */
