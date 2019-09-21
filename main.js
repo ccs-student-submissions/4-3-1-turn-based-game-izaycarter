@@ -27,6 +27,11 @@ $(document).ready(function() {
     let compHealth = 100;
     let characters = [];
 
+    window.onload = function(){
+          var chosenimageUrl = "https://media.giphy.com/media/zwhknCyqHExnW/giphy.gif"
+
+          document.getElementById('img-src').src = chosenimageUrl;
+    };
 
 
 
@@ -65,6 +70,7 @@ $(document).ready(function() {
    game[Charhero.name.toUpperCase()] = new Player(Charhero);
    console.log()
     });
+
 
 
 
