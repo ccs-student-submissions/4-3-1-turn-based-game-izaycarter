@@ -20,7 +20,7 @@ $(function() {
 
 
     let yourattack = Math.round(Math.random() * 12);
-    let compattack = Math.round(Math.random() * 20);
+    let compattack = Math.round(Math.random() * 2);
     let yourHealth = 100;
     let compHealth = 100;
     let characters = [];
