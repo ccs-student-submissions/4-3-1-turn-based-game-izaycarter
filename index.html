@@ -20,8 +20,12 @@
       </div>
       <br>
       <br>
-      <div class="when-page-active justify-content-center">
-        <h3 style="color: red;">Choose Your Player</h3>
+      <div class="choosePlayer when-page-active justify-content-center">
+        <div class="choose-player-option row">
+          <div class="col-12">
+            <h3 style="color: red;">Choose Your Player</h3>
+          </div>
+        </div>
         <select id="box1" class="selector" name="player-selection">
           <option value="Joe">Joe</option>
           <option value="Freddy">Freddy</option>
@@ -43,42 +47,42 @@
       <div class="fil-studio">
         <footer="fil-footer"> &#169; F.I.L Gaming Studio All Right Reserved</footer>
       </div>
-    </div> 
+    </div>
 
 
 
-      <!-- battle Arena!!!  -->
-      <div id="arena-page" class="when-page-active w-100 h-100 p-3 mx-auto flex-column justify-content-center">
-        <div class="row screen">
-          <div class="col d-flex justify-content-around p2LeftScreen">
-            <p>P</p>
-            <img id="PlayerAnimation" class="p2ActualPlayer" src="https://media.giphy.com/media/39BdMOJMK2YVqktnlS/giphy.gif" alt="">
-          </div>
-
-          <div class="col d-flex justify-content-around p2RightScreen">
-            <p>Villian</p>
-            <img id="VillianAnimation" class="p2AgainstPlayer" src="https://media.giphy.com/media/39BdMOJMK2YVqktnlS/giphy.gif" alt="">
-          </div>
+    <!-- battle Arena!!!  -->
+    <div id="arena-page" class="when-page-active w-100 h-100 p-3 mx-auto flex-column justify-content-center">
+      <div class="row screen">
+        <div class="col d-flex justify-content-around p2LeftScreen">
+          <p>P</p>
+          <img id="PlayerAnimation" class="p2ActualPlayer" src="https://media.giphy.com/media/39BdMOJMK2YVqktnlS/giphy.gif" alt="">
         </div>
-        <section class="health-bars">
-          <div id="yourHealth">
-            <div id="yourHealthBar"></div>
-          </div>
-          <button id="attack">Attack</button>
 
-          <div id="compHealth">
-            <div id="compHealthBar"></div>
-          </div>
-        </section>
+        <div class="col d-flex justify-content-around p2RightScreen">
+          <p>Villian</p>
+          <img id="VillianAnimation" class="p2AgainstPlayer" src="https://media.giphy.com/media/39BdMOJMK2YVqktnlS/giphy.gif" alt="">
+        </div>
       </div>
+      <section class="health-bars">
+        <div id="yourHealth">
+          <div id="yourHealthBar"></div>
+        </div>
+        <button id="attack">Attack</button>
 
-      <!--winner page  -->
-      <div id="winner-page">
-        <h2 class="win-text">YOU WIN!! Nice moves champ!</h2>
-      </div>
-      <div id="loser-page">
-        <h2 class="lose-text">Soooo..........yea.......you......um.....lost.</h2>
-      </div>
+        <div id="compHealth">
+          <div id="compHealthBar"></div>
+        </div>
+      </section>
+    </div>
+
+    <!--winner page  -->
+    <div id="winner-page">
+      <h2 class="win-text">YOU WIN!! Nice moves champ!</h2>
+    </div>
+    <div id="loser-page">
+      <h2 class="lose-text">Soooo..........yea.......you......um.....lost.</h2>
+    </div>
 
   </main>
 
