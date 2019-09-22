@@ -26,12 +26,17 @@
             <h3 style="color: red;">Choose Your Player</h3>
           </div>
         </div>
-        <select id="box1" class="selector" name="player-selection">
-          <option value="Joe">Joe</option>
-          <option value="Freddy">Freddy</option>
-          <option value="Linda">Linda</option>
-          <option value="Isaiah">Isaiah</option>
-        </select>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Choose your player!!!
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button id="joe" class="dropdown-item" type="button">Joe</button>
+                <button id="linda" class="dropdown-item" type="button">Linda</button>
+                <button id="freddy" class="dropdown-item" type="button">Freddy</button>
+                <button id="isaiah" class="dropdown-item" type="button">Isaiah</button>
+          </div>
+        </div>
       </div>
 
 
@@ -55,7 +60,8 @@
     <div id="arena-page" class="when-page-active w-100 h-100 p-3 mx-auto flex-column justify-content-center">
       <div class="row screen">
         <div class="col d-flex justify-content-around p2LeftScreen">
-          <img id="img-src" class="p2ActualPlayer" src="" alt="">
+            <h2 id="hero-name"></h2>
+            <img id="hero-img" class="p2ActualPlayer" src="" alt="">
         </div>
 
         <div class="col d-flex justify-content-around p2RightScreen">
