@@ -27,10 +27,15 @@ $(document).ready(function() {
     let compHealth = 100;
     let characters = [];
 
-    window.onload = function(){
-          var chosenimageUrl = "https://media.giphy.com/media/zwhknCyqHExnW/giphy.gif"
+    // window.onload = function(){
+    //       var chosenimageUrl = "https://media.giphy.com/media/zwhknCyqHExnW/giphy.gif"
+    //
+    //       document.getElementById('img-src').src = chosenimageUrl;
 
-          document.getElementById('img-src').src = chosenimageUrl;
+      window.onload = function(){
+            var chosenimageUrl = imageUrl
+
+            document.getElementById('img-src').src = chosenimageUrl;
     };
 
 
