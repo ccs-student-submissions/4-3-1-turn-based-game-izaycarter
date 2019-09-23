@@ -117,3 +117,66 @@ h1 {
 /*# sourceMappingURL=styles.css.map */
 
 /*# sourceMappingURL=styles.css.map */
+
+.title h1 {
+  font-size: 100px;
+  color: #b50808fd;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+}
+
+
+.selector {
+  margin-left: 10%;
+  width: 75%;
+}
+button {
+  display: block;
+}
+
+.btn-group {
+  text-align: center;
+}
+
+button.start-btn {
+    width: 200px;
+    margin-top:40px;
+    height: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button.option-btn {
+  width: 200px;
+  margin-top: 40px;
+  height: 60px;
+  border-radius: 10px;
+  opacity: 0.5;
+  cursor: not-allowed;
+
+}
+button.option-btn:hover {
+  cursor: not-allowed;
+}
+
+button.exit-btn{
+  width: 200px;
+  margin-top: 40px;
+  height: 60px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #b50808fd;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  cursor:not-allowed;
+}
+
+.fil-studio {
+  text-align: center;
+  margin-top: 110px;
+  font-size:larger;
+  font-weight: bold;
+
+}

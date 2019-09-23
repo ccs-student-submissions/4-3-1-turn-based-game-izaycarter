@@ -121,4 +121,18 @@ $(document).ready(function() {
         }
     };
 
+// Sound Effects to buttons
+
+    let buttonBeep = new Audio("./images/button-10.mp3");
+    $('.exit-btn').click(e => buttonBeep.play());
+    $('.option-btn').click(e => buttonBeep.play());
+    $('.start-btn').click(e => buttonBeep.play());
+
+    //
+    // // const buttonBeep = new Audio("./images/button-10.mp3");
+    // // $('.option-btn').click(e => buttonBeep.play());
+
+
+
+
 });
