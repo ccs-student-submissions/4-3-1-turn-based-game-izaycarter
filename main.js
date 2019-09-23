@@ -13,12 +13,11 @@ $(document).ready(function() {
     let winnerPage = winner.hide();
     let loserPage = loser.hide();
 
+
+    let game ={}
     let yourHealthBar = $('#yourHealthBar');
     let compHealthBar = $('#compHealthBar');
-    let joe = $("#joe");
-    let linda = $("#linda");
-    let freddy = $("#freddy");
-    let isaiah = $("#isaiah");
+
 
 
 
@@ -28,26 +27,26 @@ $(document).ready(function() {
     let compHealth = 100;
     let characters = [];
 
-    joe.on('click', () =>{
-        $("#hero-img").attr("src" , playJoe.imageUrl);
-        $("#hero-name").html(playJoe.name)
+    // window.onload = function(){
+    //       var chosenimageUrl = "https://media.giphy.com/media/zwhknCyqHExnW/giphy.gif"
+    //
+    //       document.getElementById('img-src').src = chosenimageUrl;
 
-    });
-    linda.on('click', () =>{
-        $("#hero-img").attr("src" , playLinda.imageUrl);
-        $("#hero-name").html(playLinda.name);
+      window.onload = function(){
+            var chosenimageUrl = imageUrl
 
-    });
-    freddy.on('click', () =>{
-        $("#hero-img").attr("src" , playFreddy.imageUrl);
-        $("#hero-name").html(playFreddy.name);
+            document.getElementById('img-src').src = chosenimageUrl;
+    };
 
-    });
-    isaiah.on('click', () =>{
-        $("#hero-img").attr("src" , playIsaiah.imageUrl);
-        $("#hero-name").html(playIsaiah.name);
 
-    });
+
+    class Player {
+        constructor(options) {
+            options = options || {};
+            this.name = options.name;
+        }
+    }
+
 
     // hero stats
     let charHero = [{
@@ -63,7 +62,7 @@ $(document).ready(function() {
     }, {
         name: 'Freddy',
         Attack: 10,
-        imageUrl: "https://media.giphy.com/media/Zguen4lLEsOtO/giphy.gif",
+        imageUrl: "https://tenor.com/view/vine-crackhead-fight-gif-11019923",
     }, {
         name: 'Isaiah',
         Attack: 10,
@@ -72,16 +71,22 @@ $(document).ready(function() {
     }, ];
 
 
-    let playJoe = charHero[0];
-    let playLinda = charHero[1];
-    let playFreddy = charHero[2];
-    let playIsaiah = charHero[3];
+    characters.forEach(function(Charhero) {
+   game[Charhero.name.toUpperCase()] = new Player(Charhero);
+   console.log()
+    });
+
 
 
 
 
     startButton.on("click", () => {
         startPage.hide();
+
+        let sel = document.getElementById("box1");
+         charHero = sel.options[sel.selectedIndex].text;
+       hero = charHero;
+       console.log('inside hero', hero);
        // heroImg = selcectHero.imageUrl;
        // document.getElementById('hero_box12').src = heroImg;
 
